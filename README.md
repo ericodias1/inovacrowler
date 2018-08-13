@@ -15,14 +15,14 @@ Exemplo:
 A resposta será:
 
     [
-	    ...
-	    {
-		    "author":"Albert Einstein",
-		    "author_about":"In 1879, Albert Einstein was born in Ulm, Germany. He completed his Ph.D. at the University of Zurich by 1909. His 1905 paper explaining the photoelectric effect, the basis of electronics...",
-		    "quote":"There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
-	 		  "tags":["inspirational","life","live","miracle","miracles"]
-		  }
-		...
+	...
+	{
+		 "author":"Albert Einstein",
+		 "author_about":"In 1879, Albert Einstein was born in Ulm, Germany. He completed his Ph.D. at the University of Zurich by 1909. His 1905 paper explaining the photoelectric effect, the basis of electronics...",
+		 "quote":"There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
+		"tags":["inspirational","life","live","miracle","miracles"]
+	}
+	...
     ]
 
 ## Arquitetura
@@ -34,7 +34,9 @@ A lib trabalha da seguinte forma: caso o termo já tenha sido pesquisado, a bibl
 Quando a biblioteca realiza a busca pelas informações de frases no site, ela busca as informações na listagem de frases: nome do autor, tags e a frase. Para salvar os dados sobre o autor, é realizada uma segunda consulta para o atributo `href` do link correspondente a descrição do autor de cada frase.
 
 Para salvar as informações no banco de dados é utilizada a seguinte arquitetura de documentos (models):
+
 **Search**: term (*string, termo de pesquisa*)
+
 **Quote**: quote (*string, texto da frase*), author (*string, autor da frase*), author_about (*string, texto sobre o autor*), tags: (*array, tags cadastradas na frase*), search: (*relacionamento **Search** que representa a busca a qual pertence esta frase*).
 
 ## Considerações
