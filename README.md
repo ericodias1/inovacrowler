@@ -20,8 +20,8 @@ A resposta será:
 		    "author":"Albert Einstein",
 		    "author_about":"In 1879, Albert Einstein was born in Ulm, Germany. He completed his Ph.D. at the University of Zurich by 1909. His 1905 paper explaining the photoelectric effect, the basis of electronics...",
 		    "quote":"There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.",
-	 		"tags":["inspirational","life","live","miracle","miracles"]
-		}
+	 		  "tags":["inspirational","life","live","miracle","miracles"]
+		  }
 		...
     ]
 
